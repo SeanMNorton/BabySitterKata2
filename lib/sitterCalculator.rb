@@ -1,5 +1,5 @@
 class SitterCalculator
-  attr_reader :startTime, :bedTime, :endTime
+  attr_reader :startTime, :bedTime, :endTime, :totalCost
   def initialize(times)
     @startTime = times[0]
     @bedTime = times[1]
@@ -8,6 +8,7 @@ class SitterCalculator
     @bedToMidnightHourly = 8
     @midnightToEndHourly = 16
     @latestTime = 4
+    @totalCost = (startToBedCost + bedToMidnightCost + midnightToEndCost)
   end
 
   def startToBedCost
@@ -28,4 +29,5 @@ class SitterCalculator
   def midnightToEndCost
     return @endTime > @latestTime ? 0 : (@endTime) * @midnightToEndHourly
   end
+
 end

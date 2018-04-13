@@ -72,4 +72,22 @@ describe SitterCalculator do
     end
   end
 
+  describe ".totalCost" do
+    context "when startTime is 5pm, bedTime is 7pm and endTime is 10pm" do
+      it "returns a total cost of $48" do
+        expect(SitterCalculator.new([5, 7, 10]).totalCost).to eq(48)
+      end
+    end
+    context "when startTime is 5pm, bedTime is 9pm and endTime is 3am" do
+      it "returns a total cost of $120" do
+        expect(SitterCalculator.new([5, 9, 3]).totalCost).to eq(120)
+      end
+    end
+    context "when startTime is 10pm, bedTime is 9pm and endTime is 1am" do
+      it "returns a total cost of $32" do
+        expect(SitterCalculator.new([10, 9, 1]).totalCost).to eq(32)
+      end
+    end
+  end
+
 end # SitterCalculator
