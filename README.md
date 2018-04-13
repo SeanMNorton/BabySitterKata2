@@ -12,7 +12,7 @@
 1. $ git clone <repo url>
 2. $ cd <repo name>
 3. $ bundle install
-4. $ <execution command>
+4. $ ruby run.rb
 ```
 
 ### How to run full test suite
