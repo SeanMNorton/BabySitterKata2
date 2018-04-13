@@ -5,4 +5,8 @@ class SitterCalculator
     @bedTime = times[1]
     @endTime = times[2]
   end
+
+  def startToBedCost
+    return (@bedTime - @startTime) * 12
+  end
 end
