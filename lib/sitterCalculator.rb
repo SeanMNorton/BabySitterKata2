@@ -1,3 +1,4 @@
+require './shared/set_times.rb'
 class SitterCalculator
   attr_reader :startTime, :bedTime, :endTime, :totalCost
   def initialize(times)
@@ -7,7 +8,6 @@ class SitterCalculator
     @startToBedHourly = 12
     @bedToMidnightHourly = 8
     @midnightToEndHourly = 16
-    @latestTime = 4
     @totalCost = (startToBedCost + bedToMidnightCost + midnightToEndCost)
   end
 
@@ -16,18 +16,17 @@ class SitterCalculator
   end
 
   def bedToMidnightCost
-    midnight = 12
-    if @endTime > @latestTime
+    if @endTime > $latestTime
       return (@endTime - @bedTime) * @bedToMidnightHourly
     elsif @startTime > @bedTime
-      return (midnight - @startTime) * @bedToMidnightHourly
+      return ($midnight - @startTime) * @bedToMidnightHourly
     else
-      return (midnight - @bedTime) * @bedToMidnightHourly
+      return ($midnight - @bedTime) * @bedToMidnightHourly
     end
   end
 
   def midnightToEndCost
-    return @endTime > @latestTime ? 0 : (@endTime) * @midnightToEndHourly
+    return @endTime > $latestTime ? 0 : (@endTime) * @midnightToEndHourly
   end
 
 end
