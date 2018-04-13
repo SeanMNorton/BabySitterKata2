@@ -65,7 +65,7 @@ describe SitterCalculator do
         expect(SitterCalculator.new([5,7,12]).midnightToEndCost).to eq(0)
       end
     end
-    context "when endTime is after midnight" do
+    context "when endTime is after midnight, 2am" do
       it "returns a cost of $32" do
         expect(SitterCalculator.new([5,7,2]).midnightToEndCost).to eq(32)
       end
