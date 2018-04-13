@@ -10,7 +10,7 @@
 ### How to run this application
 ```
 1. $ git clone https://github.com/SeanMNorton/BabySitterKata2.git
-2. $ cd BabysitterKata2
+2. $ cd BabySitterKata2
 3. $ bundle install
 4. $ ruby run.rb
 ```
