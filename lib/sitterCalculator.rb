@@ -1,4 +1,5 @@
 require './shared/set_times.rb'
+
 class SitterCalculator
   attr_reader :startTime, :bedTime, :endTime, :totalCost
   def initialize(times)
