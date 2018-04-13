@@ -12,10 +12,12 @@ class SitterCalculator
   end
 
   def bedToMidnightCost
-    if @startTime > @bedTime
+    if @endTime > 4
+      return (@endTime - @bedTime) * 8
+    elsif @startTime > @bedTime
       return (12 - @startTime) * 8
     else
-      return (@endTime - @bedTime) * 8
+      return (12 - @bedTime) * 8
     end
   end
 
