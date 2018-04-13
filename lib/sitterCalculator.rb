@@ -4,13 +4,15 @@ class SitterCalculator
     @startTime = times[0]
     @bedTime = times[1]
     @endTime = times[2]
+    @startToBedHourly = 12
   end
 
   def startToBedCost
-    if @startTime > @bedTime
-      return 0
-    else
-      return (@bedTime - @startTime) * 12
-    end
+    return @startTime > @bedTime ? 0 : (@bedTime - @startTime) * @startToBedHourly
   end
+
+  def bedToMidnightCost
+      return (@endTime - @bedTime) * 8
+  end
+
 end
