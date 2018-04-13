@@ -1,4 +1,4 @@
-# BabysitterKata 2.0
+# BabysitterKata 2
 
 ## Getting Started with this Project
 
@@ -9,8 +9,8 @@
 
 ### How to run this application
 ```
-1. $ git clone <repo url>
-2. $ cd <repo name>
+1. $ git clone https://github.com/SeanMNorton/BabySitterKata2.git
+2. $ cd BabysitterKata2
 3. $ bundle install
 4. $ ruby run.rb
 ```
