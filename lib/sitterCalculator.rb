@@ -23,4 +23,10 @@ class SitterCalculator
       return (midnight - @bedTime) * @bedToMidnightHourly
     end
   end
+
+  def midnightToEndCost
+    if @endTime > @latestTime
+      return 0
+    end
+  end
 end

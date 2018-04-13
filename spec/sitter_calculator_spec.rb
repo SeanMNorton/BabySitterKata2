@@ -54,4 +54,12 @@ describe SitterCalculator do
     end
   end
 
+  describe "#midnightToEndCost" do
+    context "when endTime is before midnight" do
+      it "returns a cost of $0" do
+        expect(SitterCalculator.new([5,7,11]).midnightToEndCost).to eq(0)
+      end
+    end
+  end
+
 end # SitterCalculator
