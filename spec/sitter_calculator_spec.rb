@@ -18,19 +18,19 @@ describe SitterCalculator do
 
   describe "#startToBedCost" do
     context "when startTime is 5pm and bedTime is 7pm" do
-      it "returns 24" do
+      it "returns a cost of $24" do
         expect(SitterCalculator.new([5,7,10]).startToBedCost).to eq(24)
       end
     end
 
     context "when startTime is 5pm and bedTime is 9pm" do
-      it "returns 48" do
+      it "returns a cost of $48" do
         expect(SitterCalculator.new([5,9,10]).startToBedCost).to eq(48)
       end
     end
 
     context "when startTime is 10pm and bedTime is 9pm" do
-      it "returns 0" do
+      it "returns a cost of $0" do
         expect(SitterCalculator.new([10,9,11]).startToBedCost).to eq(0)
       end
     end
@@ -38,8 +38,13 @@ describe SitterCalculator do
 
   describe "#bedToMidnightCost" do
     context "when startTime is 5pm bedtime is 8pm and endTime is 11pm" do
-      it "returns 24" do
+      it "returns a cost of $24" do
         expect(SitterCalculator.new([5,8,11]).bedToMidnightCost).to eq(24)
+      end
+    end
+    context "when startTime is two hours after bedtime at 7pm and endTime is 12am" do
+      it "returns a cost of $32" do
+        expect(SitterCalculator.new([8,7,11]).bedToMidnightCost).to eq(32)
       end
     end
   end
