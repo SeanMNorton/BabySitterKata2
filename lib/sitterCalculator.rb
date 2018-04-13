@@ -1,8 +1,8 @@
 class SitterCalculator
   attr_reader :startTime, :bedTime, :endTime
-  def initialize(arguments)
-    @startTime = arguments[0]
-    @bedTime = arguments[1]
-    @endTime = arguments[2]
+  def initialize(times)
+    @startTime = times[0]
+    @bedTime = times[1]
+    @endTime = times[2]
   end
 end
