@@ -7,6 +7,10 @@ class SitterCalculator
   end
 
   def startToBedCost
-    return (@bedTime - @startTime) * 12
+    if @startTime > @bedTime
+      return 0
+    else
+      return (@bedTime - @startTime) * 12
+    end
   end
 end
