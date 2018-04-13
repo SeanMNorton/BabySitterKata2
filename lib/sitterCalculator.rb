@@ -27,6 +27,8 @@ class SitterCalculator
   def midnightToEndCost
     if @endTime > @latestTime
       return 0
+    else
+     (@endTime) * 16
     end
   end
 end
