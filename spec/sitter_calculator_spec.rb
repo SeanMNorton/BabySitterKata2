@@ -10,5 +10,9 @@ describe SitterCalculator do
     it "is initalized with bedTime" do
       expect(@calc.bedTime).to eq(7)
     end
+
+    it "is initalized with endTime" do
+      expect(@calc.endTime).to eq(10)
+    end
   end
 end
