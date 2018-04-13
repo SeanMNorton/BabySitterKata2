@@ -30,7 +30,7 @@ describe SitterCalculator do
     end
 
     context "when startTime is 10pm and bedTime is 9pm" do
-      it "returns 48" do
+      it "returns 0" do
         expect(SitterCalculator.new([10,9,11]).startToBedCost).to eq(0)
       end
     end
